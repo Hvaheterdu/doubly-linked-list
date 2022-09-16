@@ -3,9 +3,7 @@ package doublylinkedlist;
 class Stack<T> extends LinkedList<T> {
 
     /**
-     * Inserting to the end of the list
-     * 
-     * @param x: element to insert
+     * Inserting element to the top of the stack
      */
     public void insertOn(T x) {
         super.insert(x);
@@ -17,9 +15,7 @@ class Stack<T> extends LinkedList<T> {
     }
 
     /**
-     * Remove the last element added from the list
-     * 
-     * @return last element from list
+     * Remove the last element added from the stack
      */
     public T takeOff() {
         int size = super.size();

@@ -3,8 +3,8 @@ package doublylinkedlist;
 class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
 
     /**
-     * @throws UnsupportedOperationException because method should not work in this
-     *                                       class
+     * @throws UnsupportedOperationException
+     * because method should not work in this class
      */
     @Override
     public void set(int pos, T x) throws UnsupportedOperationException {
@@ -12,8 +12,8 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
     }
 
     /**
-     * @throws UnsupportedOperationException because method should not work in this
-     *                                       class
+     * @throws UnsupportedOperationException
+     * because method should not work in this class
      */
     @Override
     public void insertPos(int pos, T x) throws UnsupportedOperationException {
@@ -22,8 +22,6 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
 
     /**
      * Checks if element is in list
-     * 
-     * @param x: element to check
      */
     @Override
     public boolean contains(T x) {
@@ -41,9 +39,7 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
     }
 
     /**
-     * Override method 'insert' from LinkedList
-     * 
-     * @param x: element to insert
+     * Insert item in a sorted manner in list
      */
     @Override
     public void insert(T x) {
@@ -70,8 +66,6 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
 
     /**
      * Remove from end of the list and return data to removed element
-     * 
-     * @return data from removed element
      */
     @Override
     public T remove() {

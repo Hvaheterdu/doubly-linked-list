@@ -42,21 +42,15 @@ class LinkedList<T> implements Methods<T> {
         }
 
         /**
-         * Checks if there is a next object in list
-         * 
-         * @return true if index is smaller than list size,
+         * Return true if there list has a next element
          */
         public boolean hasNext() {
             return index < size;
         }
 
         /**
-         * Go to next object If there is no next element in list, throw
-         * NoSuchElementException, meaning that we have iterated through the entire
-         * list
-         * 
-         * @return next element in list and return its data
-         * @throws NoSuchElementException if current element has no next element
+         * Returns data from next element. Throws exception if
+         * there is no next element
          */
         public T next() {
             if (!hasNext()) {
@@ -69,9 +63,7 @@ class LinkedList<T> implements Methods<T> {
     // --- LINKED LIST METHODS ---
 
     /**
-     * LinkedList size
-     * 
-     * @return list size
+     * Return LinkedList size
      */
     public int size() {
         Node ptr = head;
@@ -85,10 +77,7 @@ class LinkedList<T> implements Methods<T> {
     }
 
     /**
-     * Checks if element is in list.
-     * 
-     * @param x: some T data
-     * @return true if data is already in list, else false
+     * If true, the list contains the element
      */
     public boolean contains(T x) {
         int size = size();
@@ -108,10 +97,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Insert element at Nth position and push everything one index backwards
-     * 
-     * @param pos: position at list
-     * @param x:   some T data
-     * @throws InvalidListIndex if pos > size or pos < 0
      */
     public void insertPos(int pos, T x) throws InvalidListIndex {
         Node newN = new Node(x);
@@ -148,8 +133,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Insert something at the end of the list
-     * 
-     * @param x: some T data
      */
     public void insert(T x) {
         Node newN = new Node(x);
@@ -165,10 +148,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Set data in given position and overwrite the data that is already there
-     * 
-     * @param pos: position in list
-     * @param x:   some T data
-     * @throws InvalidListIndex if pos > size - 1 or pos < 0
      */
     public void set(int pos, T x) throws InvalidListIndex {
         Node ptr = head;
@@ -188,10 +167,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Get element T in given position and return elements data
-     * 
-     * @param pos: position in list
-     * @return elements data at that given position
-     * @throws InvalidListIndex if pos > size - 1 or pos < 0
      */
     public T get(int pos) throws InvalidListIndex {
         Node ptr = head;
@@ -209,10 +184,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Remove element T in given position and return elements data
-     * 
-     * @param pos: position in list
-     * @return data from the removed element
-     * @throws InvalidListIndex if pos > size - 1 or pos < 0
      */
     public T removePos(int pos) throws InvalidListIndex {
         Node ptr = head;
@@ -244,9 +215,7 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Remove element T from the start of the list
-     * 
-     * @return data from the removed element
-     * @throws InvalidListIndex if list is empty
+     * and return its data
      */
     public T remove() throws InvalidListIndex {
         if (isEmpty()) {
@@ -262,10 +231,7 @@ class LinkedList<T> implements Methods<T> {
     }
 
     /**
-     * Delete last element from list
-     * 
-     * @return last elements data
-     * @throws InvalidListIndex if list is empty
+     * Delete last element from list and return its data
      */
     public T removeLast() throws InvalidListIndex {
         if (isEmpty()) {
@@ -309,9 +275,7 @@ class LinkedList<T> implements Methods<T> {
     // --- HELP METHODS ---
 
     /**
-     * Checking if list is empty
-     * 
-     * @return true if empty, else false
+     * If true, list is empty
      */
     private boolean isEmpty() {
         return head == null;
@@ -319,8 +283,6 @@ class LinkedList<T> implements Methods<T> {
 
     /**
      * Get head pointer in list
-     * 
-     * @return head pointer
      */
     protected Node getHead() {
         return head;
