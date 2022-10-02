@@ -5,7 +5,6 @@ import java.util.NoSuchElementException;
 
 class LinkedList<T> implements Methods<T> {
 
-    // Start and end reference to list
     private Node head;
     private Node tail;
 

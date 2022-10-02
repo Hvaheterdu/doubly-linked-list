@@ -46,13 +46,12 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
         int size = super.size();
         int counter = 0;
 
+        if (super.contains(x)) {
+            return;
+        }
+
         if (size == 0) {
             super.insert(x);
-
-            // If you don't want to add duplicates
-            /*
-             * if (!super.contains(x)) { super.insert(x); }
-             */
         } else {
             Node ptr = getHead();
 
