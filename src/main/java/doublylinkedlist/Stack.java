@@ -6,12 +6,11 @@ class Stack<T> extends LinkedList<T> {
      * Inserting element to the top of the stack
      */
     public void insertOn(T x) {
-        super.insert(x);
-
-        // If you don't want to add duplicates
-        /*
-         * if (!super.contains(x)) { super.insert(x); }
-         */
+        if (super.contains(x)) {
+            return;
+        } else {
+            super.insert(x);
+        }
     }
 
     /**
