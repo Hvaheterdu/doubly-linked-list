@@ -9,10 +9,10 @@ class LinkedList<T> implements Methods<T> {
     private Node tail;
 
     // Node class
-    class Node {
-        Node next;
-        Node prev;
-        T data;
+    protected class Node {
+        protected Node next;
+        protected Node prev;
+        protected T data;
 
         Node(T data) {
             this.data = data;
