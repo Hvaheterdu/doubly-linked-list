@@ -14,7 +14,7 @@ class LinkedList<T> implements Methods<T> {
         protected Node prev;
         protected T data;
 
-        Node(T data) {
+        protected Node(T data) {
             this.data = data;
         }
     }
@@ -36,7 +36,7 @@ class LinkedList<T> implements Methods<T> {
 
         int size = size();
 
-        LinkedListIterator(LinkedList<T> linkedList) {
+        private LinkedListIterator(LinkedList<T> linkedList) {
             this.linkedList = linkedList;
         }
 
