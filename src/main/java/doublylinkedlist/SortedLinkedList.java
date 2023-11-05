@@ -18,7 +18,6 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
             return false;
         }
 
-        // Looping through list to find element
         for (int i = 0; i < size(); i++) {
             if (super.get(i).compareTo(x) == 0) {
                 return true;
