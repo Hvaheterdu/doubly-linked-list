@@ -43,6 +43,7 @@ class LinkedList<T> implements Methods<T> {
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
+
             return linkedList.get(index++);
         }
     }
@@ -57,6 +58,7 @@ class LinkedList<T> implements Methods<T> {
             ptr = ptr.next;
             counter++;
         }
+
         return counter;
     }
 
@@ -72,6 +74,7 @@ class LinkedList<T> implements Methods<T> {
                 return true;
             }
         }
+
         return false;
     }
 
@@ -147,6 +150,7 @@ class LinkedList<T> implements Methods<T> {
         for (int i = 0; i < pos; i++) {
             ptr = ptr.next;
         }
+
         return ptr.data;
     }
 
@@ -174,6 +178,7 @@ class LinkedList<T> implements Methods<T> {
             ptr.prev.next = ptr.next;
             ptr.next.prev = ptr.prev;
         }
+
         return ptr.data;
     }
 
