@@ -23,6 +23,7 @@ class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
                 return true;
             }
         }
+
         return false;
     }
 
